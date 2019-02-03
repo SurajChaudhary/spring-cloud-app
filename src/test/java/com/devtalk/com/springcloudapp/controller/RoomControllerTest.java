@@ -32,6 +32,13 @@ public class RoomControllerTest {
                 .andDo(print());
     }
 
+    @Test
+    public void testGetRooms() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/roomservice/rooms"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(print());
+    }
+
 
 
 }
